@@ -46,6 +46,10 @@ footer {
     text-transform: uppercase;
     margin: 0;
   }
+
+  button, a {
+    outline: none;
+  }
 }
 
 header {
