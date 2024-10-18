@@ -96,7 +96,7 @@ header {
 }
 
 footer {
-  gap: 1rem;
+  row-gap: 1rem;
   background-color: var(--clr-accent);
   color: var(--clr-background);
   padding-block: 0 1rem;
