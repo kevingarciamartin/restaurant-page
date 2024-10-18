@@ -138,7 +138,7 @@ footer {
   
   .footer-links {
     grid-column: start / end;
-    align-items: center;
+    align-items: end;
 
     span, ul a {
       color: var(--clr-text-secondary);
