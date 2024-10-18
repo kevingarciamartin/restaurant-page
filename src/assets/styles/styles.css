@@ -1,3 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --clr-neutral-300: #edede4;
+  --clr-neutral-500: #b9ada5;
+  --clr-neutral-900: #241a16;
+
+  --clr-brown: #7f3828;
+
+  --clr-accent: var(--clr-brown);
+  --clr-background: var(--clr-neutral-300);
+  --clr-text: var(--clr-neutral-900);
+  --clr-text-secondary: var(--clr-neutral-500);
+}
+
 body {
-  background-color: rebeccapurple;
+  background-color: var(--clr-background);
+  color: var(--clr-text);
+  font-family: 'Manrope';
 }
