@@ -15,6 +15,10 @@
   --fs-300: clamp(0.75rem, 0.5vw + 0.5rem, 1rem);
   --fs-400: clamp(0.875rem, 1vw + 0.5rem, 1.125rem);
   --fs-500: clamp(1rem, 1.5vw + 0.5rem, 1.5rem);
+
+  --fw-bold: 700;
+
+  --column-gap: 1rem;
 }
 
 body {
@@ -24,7 +28,6 @@ body {
   grid-template-columns: var(--_body-padding-inline) [start] repeat(12, 1fr) [end] var(
       --_body-padding-inline
     );
-  grid-template-rows: auto 1fr;
 
   background-color: var(--clr-background);
   color: var(--clr-text);
@@ -48,10 +51,10 @@ footer {
     margin: 0;
   }
 
-  button, a {
+  button,
+  a {
     outline: none;
     transition: color 200ms ease;
-
   }
 }
 
@@ -107,25 +110,33 @@ header {
 }
 
 footer {
-  row-gap: 1rem;
+  row-gap: var(--column-gap);
   background-color: var(--clr-accent);
   color: var(--clr-background);
+  margin-block: 2rem 0;
   padding-block: 0 1rem;
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-column: start / end;
+    gap: var(--column-gap);
+  }
 
   section {
     display: grid;
     grid-template-columns: subgrid;
   }
-  
+
   .footer-info {
     --_footer-info-span: 6;
 
-    grid-column: 8 / span var(--_footer-info-span);
-    
+    grid-column: 7 / span var(--_footer-info-span);
+
     article:nth-of-type(1) {
       grid-column: span calc(var(--_footer-info-span) / 2);
     }
-    
+
     article:nth-of-type(2) {
       grid-column: 4 / span calc(var(--_footer-info-span) / 2);
     }
@@ -141,12 +152,13 @@ footer {
       }
     }
   }
-  
+
   .footer-links {
     grid-column: start / end;
     align-items: end;
 
-    span, ul a {
+    span,
+    ul a {
       color: var(--clr-text-secondary);
       font-size: var(--fs-300);
     }
@@ -167,7 +179,8 @@ footer {
       a {
         text-decoration: none;
 
-        &:hover, &:focus-visible {
+        &:hover,
+        &:focus-visible {
           color: var(--clr-background);
         }
       }
@@ -179,19 +192,22 @@ main {
   display: grid;
   grid-template-columns: subgrid;
   grid-column: 1 / -1;
-  
-  #hero {
+
+  section {
     display: grid;
     grid-template-columns: subgrid;
     grid-column: start / end;
+    column-gap: var(--column-gap);
 
     margin-block: 2rem;
+  }
 
+  #hero {
     .hero-title {
       grid-column: span 4;
 
       font-size: var(--fs-500);
-      font-weight: 700;
+      font-weight: var(--fw-bold);
       text-transform: uppercase;
     }
 
@@ -209,6 +225,84 @@ main {
       aspect-ratio: 3 / 1;
       object-fit: cover;
       object-position: bottom;
+    }
+  }
+
+  #northern-atmosphere {
+    .northern-atmosphere-header {
+      grid-column: 1 / -1;
+
+      margin-block: 0 1rem;
+
+      .northern-atmosphere-title {
+        font-size: var(--fs-300);
+        margin: 0;
+      }
+
+      .northern-atmosphere-subtitle {
+        font-size: var(--fs-500);
+        font-weight: var(--fw-bold);
+        text-transform: uppercase;
+        text-wrap: pretty;
+        margin: 0;
+      }
+    }
+
+    .northern-atmosphere-content-container {
+      display: grid;
+      grid-template-columns: subgrid;
+      grid-column: 1 / -1;
+      gap: var(--column-gap);
+
+      > * {
+        grid-column: span 6;
+      }
+
+      > img {
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+      }
+
+      .northern-atmosphere-content-container-right {
+        display: grid;
+        grid-template-columns: subgrid;
+        gap: var(--column-gap);
+
+        .northern-atmosphere-content {
+          display: grid;
+          grid-template-columns: subgrid;
+          grid-column: 1 / -1;
+
+          .northern-atmosphere-content-text {
+            grid-column: span 4;
+            font-size: var(--fs-300);
+            margin: 0;
+          }
+
+          button {
+            grid-column: 1 / -1;
+            color: var(--clr-accent);
+            background-color: transparent;
+            border: 1px solid var(--clr-accent);
+            border-radius: 999rem;
+            width: fit-content;
+            padding: 0.5rem 1rem;
+            outline: none;
+            transition: color 200ms ease, background-color 200ms ease;
+
+            &:hover, &:focus-visible {
+              color: var(--clr-background);
+              background-color: var(--clr-accent);
+            }
+          }
+        }
+
+        img {
+          grid-column: span 3;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
   }
 }

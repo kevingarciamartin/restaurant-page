@@ -4,20 +4,18 @@ import Index from "./assets/pages/indexContent";
 import Menu from "./assets/pages/menu";
 import Reservation from "./assets/pages/reservation";
 import Contact from "./assets/pages/contact";
+import initPageSwitch from "./assets/helpers/initPageSwitch";
 
 Index();
 
 const handleClickEvent = (() => {
   const navButtons = document.querySelectorAll(".nav-btn");
-  const pageContent = document.querySelector("#content");
 
   navButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
       const { target } = event;
-      pageContent.textContent = "";
-
-      const activeButton = document.getElementsByClassName("nav-btn active");
-      activeButton[0].classList.remove("active");
+      
+      initPageSwitch();
       target.classList.add("active");
       if (target.id === "nav-home") {
         Index();
