@@ -16,6 +16,10 @@ const handleClickEvent = (() => {
     button.addEventListener("click", (event) => {
       const { target } = event;
       pageContent.textContent = "";
+
+      const activeButton = document.getElementsByClassName("nav-btn active");
+      activeButton[0].classList.remove("active");
+      target.classList.add("active");
       if (target.id === "nav-home") {
         Index();
       } else if (target.id === "nav-menu") {
