@@ -78,6 +78,8 @@ footer {
 }
 
 header {
+  margin-block: 0 2rem;
+
   h1 {
     color: var(--clr-accent);
   }
@@ -222,6 +224,8 @@ main {
   }
 
   #hero {
+    margin-top: 0;
+    
     .hero-title {
       grid-column: span 4;
 
