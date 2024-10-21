@@ -14,18 +14,13 @@ const handleClickEvent = (() => {
   navButtons.forEach((button) => {
     button.addEventListener("click", (event) => {
       const { target } = event;
-      
+
       initPageSwitch();
       target.classList.add("active");
-      if (target.id === "nav-home") {
-        Index();
-      } else if (target.id === "nav-menu") {
-        Menu();
-      } else if (target.id === "nav-reservation") {
-        Reservation();
-      } else if (target.id === "nav-contact") {
-        Contact();
-      }
+      if (target.id === "nav-home") Index();
+      else if (target.id === "nav-menu") Menu();
+      else if (target.id === "nav-reservation") Reservation();
+      else if (target.id === "nav-contact") Contact();
     });
   });
 })();
