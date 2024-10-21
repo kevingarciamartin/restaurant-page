@@ -15,7 +15,7 @@ export default function Hero() {
   heroTitle.textContent =
     "Discover the flavors of Norway at our authentic Norwegian cuisine restaurant.";
   heroSubtitle.textContent =
-    "Indulge in traditional dishes made ith the freshest locally sourced ingredients, expertly prepared to showcase he rich culinary heritage of Norway.";
+    "Indulge in traditional dishes made with the freshest locally sourced ingredients, expertly prepared to showcase the rich culinary heritage of Norway.";
   heroImage.src = image;
 
   pageContent.appendChild(hero);
