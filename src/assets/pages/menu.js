@@ -7,6 +7,8 @@ import Reservation from "../pages/reservation";
 const pageContent = document.querySelector("#content");
 
 export default function Menu() {
+  document.title = "Menu - Fjordsmaken";
+
   const menu = document.createElement("section");
   const menuImage1 = document.createElement("img");
   const menuImage2 = document.createElement("img");

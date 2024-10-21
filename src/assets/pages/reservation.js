@@ -1,1 +1,3 @@
-export default function Reservation() {}
+export default function Reservation() {
+  document.title = "Reservation - Fjordsmaken";
+}
