@@ -341,7 +341,6 @@ main {
 
       ul {
         list-style: circle;
-        /* padding: 0; */
 
         li {
           font-size: var(--fs-400);
