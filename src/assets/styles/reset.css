@@ -47,7 +47,7 @@ input:is([type="submit"], [type="button"], [type="checkbox"]) {
 }
 
 input[type="number"] {
-  appearance: none;
+  appearance: normal;
   -moz-appearance: textfield;
 }
 
