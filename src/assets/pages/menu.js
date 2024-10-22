@@ -27,7 +27,7 @@ export default function Menu() {
   menuImage1.src = image1;
   menuImage2.src = image2;
   menuContentContainer.classList.add("menu-content-container");
-  menuTitle.classList.add("menu-title");
+  menuTitle.classList.add("menu-title", "page-title");
   menuText1.classList.add("menu-text");
   menuText2.classList.add("menu-text");
   menuPricingList.classList.add("menu-pricing-container");
