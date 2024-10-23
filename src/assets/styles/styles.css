@@ -95,6 +95,7 @@ body {
       border: 1px solid var(--clr-neutral-500);
       border-radius: var(--border-radius-small);
       padding: 0.5ch;
+      width: 100%;
 
       &:focus-visible {
         outline: 1px solid var(--clr-accent);
