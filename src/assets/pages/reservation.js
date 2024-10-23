@@ -29,6 +29,8 @@ export default function Reservation() {
   labelNoOfGuests.setAttribute("for", "no-of-guests");
   inputNoOfGuests.setAttribute("list", "no-of-guests-list");
   inputNoOfGuests.setAttribute("type", "number");
+  inputNoOfGuests.setAttribute("min", "1");
+  inputNoOfGuests.setAttribute("max", "6");
   inputNoOfGuests.setAttribute = ("id", "no-of-guests");
   datalistNoOfGuests.id = "no-of-guests-list";
 
