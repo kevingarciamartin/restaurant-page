@@ -77,7 +77,7 @@ body {
 
   .picker-container {
     display: flex;
-    justify-content: space-between;
+    gap: 1rem;
   }
 
   fieldset {
@@ -86,6 +86,7 @@ body {
 
     border: none;
     padding: 0;
+    width: 100%;
 
     label {
       font-size: var(--fs-400);
