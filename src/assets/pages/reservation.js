@@ -19,6 +19,10 @@ export default function Reservation() {
   const inputNoOfGuests = document.createElement("input");
   const datalistNoOfGuests = document.createElement("datalist");
   const button = Button("Reserve a table");
+  const errorMessageName = document.createElement("p");
+  const errorMessageEmail = document.createElement("p");
+  const errorMessageDate = document.createElement("p");
+  const errorMessageNoOfGuests = document.createElement("p");
 
   pickerContainer.classList.add("picker-container");
   labelDate.textContent = "Date";
@@ -33,6 +37,14 @@ export default function Reservation() {
   inputNoOfGuests.setAttribute("max", "6");
   inputNoOfGuests.setAttribute = ("id", "no-of-guests");
   datalistNoOfGuests.id = "no-of-guests-list";
+  errorMessageName.textContent = "Fill out this field";
+  errorMessageEmail.textContent = "Fill out this field";
+  errorMessageDate.textContent = "Fill out this field";
+  errorMessageNoOfGuests.textContent = "Fill out this field";
+  errorMessageName.classList.add("input-error-message", "error-name");
+  errorMessageEmail.classList.add("input-error-message", "error-email");
+  errorMessageDate.classList.add("input-error-message", "error-date");
+  errorMessageNoOfGuests.classList.add("input-error-message", "error-guests");
 
   for (let i = 0; i < 6; i++) {
     const option = document.createElement("option");
@@ -52,8 +64,30 @@ export default function Reservation() {
   fieldsetNoOfGuests.appendChild(labelNoOfGuests);
   fieldsetNoOfGuests.appendChild(inputNoOfGuests);
   fieldsetNoOfGuests.appendChild(datalistNoOfGuests);
+  fieldsetName.appendChild(errorMessageName);
+  fieldsetEmail.appendChild(errorMessageEmail);
+  fieldsetDate.appendChild(errorMessageDate);
+  fieldsetNoOfGuests.appendChild(errorMessageNoOfGuests);
 
   button.addEventListener("click", (event) => {
     event.preventDefault();
+
+    const name = document.querySelector("#name");
+    const email = document.querySelector("#email");
+    const date = document.querySelector("#date");
+    const guests = document.querySelector("input[list=no-of-guests-list]");
+
+    document.querySelectorAll(".input-error-message").forEach((error) => {
+      error.style.visibility = "hidden";
+    });
+
+    if (name.value === "")
+      document.querySelector(".error-name").style.visibility = "visible";
+    if (email.value === "")
+      document.querySelector(".error-email").style.visibility = "visible";
+    if (date.value === "")
+      document.querySelector(".error-date").style.visibility = "visible";
+    if (guests.value === "")
+      document.querySelector(".error-guests").style.visibility = "visible";
   });
 }

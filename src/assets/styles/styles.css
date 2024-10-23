@@ -62,7 +62,6 @@ body {
 
 .form {
   display: grid;
-  gap: 1rem;
   grid-column: 6 / 10;
 
   border: 1px solid var(--clr-neutral-500);
@@ -72,7 +71,7 @@ body {
   width: 100%;
 
   h2 {
-    margin-block: 0;
+    margin-block: 0 1em;
   }
 
   .picker-container {
@@ -101,6 +100,13 @@ body {
       &:focus-visible {
         outline: 1px solid var(--clr-accent);
       }
+    }
+
+    .input-error-message {
+      color: firebrick;
+      font-size: var(--fs-300);
+      margin-block: 0 0.5em;
+      visibility: hidden;
     }
   }
 
