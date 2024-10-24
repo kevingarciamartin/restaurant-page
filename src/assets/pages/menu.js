@@ -1,5 +1,5 @@
-import image1 from "../img/food-5.jpg";
-import image2 from "../img/food-3.jpg";
+import image1 from "../img/food-4.jpg";
+import image2 from "../img/food-3-small.jpg";
 import Button from "../components/Button";
 import initPageSwitch from "../helpers/initPageSwitch";
 import Reservation from "../pages/reservation";

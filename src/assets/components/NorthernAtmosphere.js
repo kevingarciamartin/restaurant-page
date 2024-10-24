@@ -1,6 +1,6 @@
 import image1 from "../img/food-1.jpg";
-import image2 from "../img/food-2.jpg";
-import image3 from "../img/interior-1.jpg";
+import image2 from "../img/food-2-small.jpg";
+import image3 from "../img/interior-1-small.jpg";
 import Button from "./Button";
 import initPageSwitch from "../helpers/initPageSwitch";
 import Reservation from "../pages/reservation";
@@ -16,7 +16,7 @@ export default function NorthernAtmosphere() {
   const sectionContentContainerRight = document.createElement("div");
   const sectionContent = document.createElement("div");
   const sectionContentText = document.createElement("p");
-  const sectionContentButton = Button('Reserve a table');
+  const sectionContentButton = Button("Reserve a table");
   const sectionImage1 = document.createElement("img");
   const sectionImage2 = document.createElement("img");
   const sectionImage3 = document.createElement("img");
