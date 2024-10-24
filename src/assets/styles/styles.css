@@ -61,7 +61,6 @@ body {
 }
 
 .form {
-  display: grid;
   grid-column: 6 / 10;
 
   border: 1px solid var(--clr-neutral-500);
@@ -74,9 +73,40 @@ body {
     margin-block: 0 1em;
   }
 
+  .form-content {
+    display: grid;
+    
+    font-size: var(--fs-400);
+
+    > p {
+      margin-top: 0;
+    }
+
+    ul {
+      display: grid;
+      gap: 1rem;
+
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li p {
+        margin: 0;
+
+        &:first-of-type {
+          font-size: var(--fs-300);
+        }
+      }
+    }
+  }
+
   .picker-container {
     display: flex;
     gap: 1rem;
+
+    .input-error-message {
+      height: 2em;
+    }
   }
 
   fieldset {
@@ -88,12 +118,13 @@ body {
     width: 100%;
 
     label {
-      font-size: var(--fs-400);
+      font-size: var(--fs-300);
     }
 
     input {
       border: 1px solid var(--clr-neutral-500);
       border-radius: var(--border-radius-small);
+      font-size: var(--fs-400);
       padding: 0.5ch;
       width: 100%;
 
