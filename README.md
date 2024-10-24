@@ -1,1 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/DDR2YMeL)
+# Restaurant page
+A singel page restaurant website, created with JavaScript and Webpack.
+
+Live preview of the project is [here](https://kevingarciamartin.github.io/restaurant-page/).
